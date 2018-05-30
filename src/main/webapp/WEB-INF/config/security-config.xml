@@ -6,6 +6,7 @@
 
   <http auto-config="true">
     <intercept-url access="ROLE_USER" pattern="/**"/>
+    <http-basic/>
   </http>
 
   <authentication-manager>
