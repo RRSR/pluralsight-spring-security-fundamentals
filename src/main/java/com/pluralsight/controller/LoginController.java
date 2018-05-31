@@ -17,10 +17,16 @@ public class LoginController {
     return "login";
   }
 
-  @RequestMapping(value = "loginFailed", method = RequestMethod.GET)
+  @RequestMapping(value = "/loginFailed", method = RequestMethod.GET)
   private String loginFailed(Model model) {
     System.out.println("Login Failed!!!");
     model.addAttribute("error", true);
     return "login";
+  }
+
+  @RequestMapping(value = "/logout", method = RequestMethod.GET)
+  private String logout(Model model) {
+    System.out.println("Logging out...");
+    return "logout";
   }
 }
