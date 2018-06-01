@@ -29,4 +29,10 @@ public class LoginController {
     System.out.println("Logging out...");
     return "logout";
   }
+
+  @RequestMapping(value = "/403", method = RequestMethod.GET)
+  private String error403(Model model) {
+    System.out.println("Unauthorised!!!");
+    return "403";
+  }
 }
