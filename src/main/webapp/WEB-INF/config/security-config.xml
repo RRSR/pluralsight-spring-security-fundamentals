@@ -8,9 +8,11 @@
     <intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/login.html"/>
     <intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/loginFailed.html"/>
     <intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/logout.html"/>
+    <intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/403.html"/>
     <intercept-url access="ROLE_USER" pattern="/**"/>
     <form-login authentication-failure-url="/loginFailed.html" login-page="/login.html"/>
     <logout logout-success-url="/logout.html"/>
+    <access-denied-handler error-page="/403.html"/>
   </http>
 
   <authentication-manager>
